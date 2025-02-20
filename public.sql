@@ -80,3 +80,6 @@ SELECT * FROM employee FULL JOIN department ON department.departmentid = employe
 
 
 SELECT * FROM employee NATURAL JOIN department;
+SELECT * FROM employee CROSS JOIN department;
+
+
