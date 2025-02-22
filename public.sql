@@ -83,3 +83,14 @@ SELECT * FROM employee NATURAL JOIN department;
 SELECT * FROM employee CROSS JOIN department;
 
 
+-- Aggregate function
+
+SELECT d.name, avg(e.salary), sum(e.salary), max(e.salary) from employees e FULL JOIN department d on e.deptid = d.deptid
+GROUP BY d.name WHERE d.name = 'HR';
+
+
+SELECT d.name,sum(salary), avg(salary), min(salary), count(*) from department FULL JOIN employees e on e.deptid = d.deptid
+GROUP BY d.name;
+
+
+
